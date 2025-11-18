@@ -1,54 +1,59 @@
 :root{
-  --bg:#f6f7fb;
-  --card:#fff;
+  --bg:#f7f9fb;
+  --card:#ffffff;
   --muted:#6b7280;
   --accent:#0f766e;
-  --glass: rgba(255,255,255,0.7);
-  --shadow: 0 8px 24px rgba(15,23,42,0.06);
-  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  --shadow: 0 10px 30px rgba(2,6,23,0.06);
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial;
+  color-scheme: light;
 }
 
+/* reset */
 *{box-sizing:border-box}
-html,body{height:100%}
-body{
-  margin:0;
-  background: linear-gradient(180deg, var(--bg), #ffffff);
-  color:#0f172a;
-  -webkit-font-smoothing:antialiased;
-  -moz-osx-font-smoothing:grayscale;
-  line-height:1.5;
-}
+html,body{height:100%;margin:0}
+img{max-width:100%;height:auto;display:block}
 
 /* container */
-.container{max-width:1100px;margin:0 auto;padding:28px}
+.container{max-width:1100px;margin:0 auto;padding:20px}
 
 /* hero */
-.hero{padding:36px 0}
-.profile{display:flex;gap:22px;align-items:center;flex-wrap:wrap}
-.avatar-wrap{width:140px;height:140px;border-radius:18px;padding:6px;background:linear-gradient(135deg,#fff,#f3f4f6);box-shadow:var(--shadow);flex:0 0 140px;display:flex;align-items:center;justify-content:center;overflow:hidden}
-.avatar{width:100%;height:100%;object-fit:cover;border-radius:12px;display:block;transform:translateY(0);transition:transform .6s cubic-bezier(.2,.9,.2,1)}
-.profile-text{flex:1;min-width:220px}
-.name{margin:0;font-size:28px;font-weight:700}
-.location,.role{margin:6px 0;color:var(--muted)}
-.contact-row{display:flex;gap:12px;flex-wrap:wrap;margin:12px 0}
-.contact-item a{color:var(--accent);text-decoration:none}
-.actions{margin-top:12px;display:flex;gap:10px;flex-wrap:wrap}
-
-/* buttons */
-.btn{
-  display:inline-block;padding:9px 14px;border-radius:10px;background:var(--accent);color:#fff;text-decoration:none;font-weight:600;border:none;cursor:pointer;box-shadow:0 6px 18px rgba(15,118,110,0.12);
+.hero{background:linear-gradient(180deg, #ffffff 0%, var(--bg) 100%);padding:18px 0}
+.hero-inner{display:flex;align-items:center;justify-content:center}
+.profile-card{display:flex;gap:18px;align-items:center;width:100%;max-width:1000px;padding:12px;border-radius:12px;background:transparent}
+.avatar-wrap{
+  flex:0 0 auto;
+  width:140px;
+  height:140px;
+  border-radius:14px;
+  overflow:hidden;
+  box-shadow:var(--shadow);
+  background:linear-gradient(180deg,#f3f4f6,#ffffff);
+  display:flex;align-items:center;justify-content:center;
 }
+.avatar{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s ease}
+
+/* profile text */
+.profile-info{flex:1;min-width:220px}
+.name{margin:0;font-size:26px;font-weight:700}
+.location,.role{margin:6px 0;color:var(--muted)}
+.contact-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:10px;font-size:14px}
+.contact-row a{color:var(--accent);text-decoration:none}
+.hidden-phone{color:var(--muted);font-style:italic}
+
+/* actions */
+.actions{margin-top:12px;display:flex;gap:10px;flex-wrap:wrap}
+.btn{display:inline-block;padding:8px 14px;border-radius:8px;background:var(--accent);color:#fff;text-decoration:none;font-weight:600;border:none;cursor:pointer;box-shadow:0 6px 18px rgba(15,118,110,0.12)}
 .btn.ghost{background:transparent;color:var(--accent);border:1px solid rgba(15,118,110,0.12)}
 
-/* grid main */
-.main-grid{display:grid;grid-template-columns: 1fr 340px;gap:18px;padding-bottom:36px}
-@media (max-width:920px){
-  .main-grid{grid-template-columns:1fr}
-}
+/* main grid */
+.main-grid{display:grid;grid-template-columns: 1fr 360px;gap:18px;padding:24px 0}
+@media (max-width:980px){ .main-grid{grid-template-columns:1fr} }
 
-/* card */
+/* cards */
 .card{background:var(--card);padding:18px;border-radius:12px;box-shadow:var(--shadow);overflow:hidden;transform:translateY(12px);opacity:0;transition:transform .7s ease,opacity .7s ease}
 .card h2{margin-top:0}
+
+/* skills */
 .skill-list{display:flex;flex-direction:column;gap:12px}
 .skill-head{display:flex;justify-content:space-between;font-weight:600;margin-bottom:6px;color:var(--muted)}
 .bar{height:10px;background:#eef2f3;border-radius:999px;overflow:hidden}
@@ -58,22 +63,23 @@ body{
 .job{margin-bottom:14px}
 .meta{color:var(--muted);font-size:14px;margin:6px 0}
 
+/* small lists */
+.mini-list{padding-left:18px;margin:8px 0 0 0}
+
 /* footer */
-.footer{padding:20px 0;border-top:1px solid #eef2f4;margin-top:18px;color:var(--muted)}
+.footer{padding:18px 0;border-top:1px solid #eef2f4;margin-top:18px;color:var(--muted)}
 
-/* small screens */
-@media (max-width:520px){
-  .avatar-wrap{width:110px;height:110px}
-  .name{font-size:22px}
-  .main-grid{gap:12px}
-}
-
-/* subtle hover */
+/* hover & accessible reduce motion */
 .avatar-wrap:hover .avatar{transform:scale(1.03) translateY(-4px)}
 .card:focus-within, .card:hover{transform:translateY(0)}
 
-/* animated reveal classes */
+/* revealed */
 .revealed{transform:none;opacity:1}
 
-/* tiny progress labels on mobile */
-.skill .skill-head span{font-size:14px}
+/* responsive tweaks */
+@media (max-width:720px){
+  .avatar-wrap{width:110px;height:110px;border-radius:12px}
+  .name{font-size:20px}
+  .main-grid{gap:12px}
+  .profile-card{padding:8px}
+}
