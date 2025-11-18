@@ -1,74 +1,79 @@
 :root{
-  --bg:#f7f8fb;
-  --card:#ffffff;
+  --bg:#f6f7fb;
+  --card:#fff;
   --muted:#6b7280;
-  --accent:#0b5fff;
-  --text:#0b1220;
-  --radius:10px;
-  font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  --accent:#0f766e;
+  --glass: rgba(255,255,255,0.7);
+  --shadow: 0 8px 24px rgba(15,23,42,0.06);
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
 }
 
 *{box-sizing:border-box}
 html,body{height:100%}
 body{
   margin:0;
-  background:var(--bg);
-  color:var(--text);
-  line-height:1.5;
+  background: linear-gradient(180deg, var(--bg), #ffffff);
+  color:#0f172a;
   -webkit-font-smoothing:antialiased;
   -moz-osx-font-smoothing:grayscale;
-  font-size:16px;
+  line-height:1.5;
 }
 
-.container{
-  max-width:980px;
-  margin:0 auto;
-  padding:28px;
-}
+/* container */
+.container{max-width:1100px;margin:0 auto;padding:28px}
 
-.site-header{
-  background:linear-gradient(90deg, #ffffff 0%, #f4f6fb 100%);
-  border-bottom:1px solid rgba(16,24,40,0.06);
-  padding:18px 0;
-}
-.header-inner{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  gap:20px;
-}
-.name-block h1{margin:0;font-size:22px}
-.name-block .sub{margin:4px 0 0;color:var(--muted);font-weight:600}
-.contact a{display:block;color:var(--accent);text-decoration:none;margin-bottom:6px}
-.contact p{margin:0;color:var(--muted);font-size:14px}
+/* hero */
+.hero{padding:36px 0}
+.profile{display:flex;gap:22px;align-items:center;flex-wrap:wrap}
+.avatar-wrap{width:140px;height:140px;border-radius:18px;padding:6px;background:linear-gradient(135deg,#fff,#f3f4f6);box-shadow:var(--shadow);flex:0 0 140px;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.avatar{width:100%;height:100%;object-fit:cover;border-radius:12px;display:block;transform:translateY(0);transition:transform .6s cubic-bezier(.2,.9,.2,1)}
+.profile-text{flex:1;min-width:220px}
+.name{margin:0;font-size:28px;font-weight:700}
+.location,.role{margin:6px 0;color:var(--muted)}
+.contact-row{display:flex;gap:12px;flex-wrap:wrap;margin:12px 0}
+.contact-item a{color:var(--accent);text-decoration:none}
+.actions{margin-top:12px;display:flex;gap:10px;flex-wrap:wrap}
 
-.card{
-  background:var(--card);
-  border-radius:var(--radius);
-  padding:20px;
-  box-shadow:0 6px 20px rgba(13,23,40,0.04);
-  margin-bottom:16px;
-}
-
-.summary .cta{margin-top:12px;display:flex;gap:10px}
+/* buttons */
 .btn{
-  display:inline-block;padding:10px 14px;border-radius:8px;text-decoration:none;font-weight:600;background:var(--accent);color:#fff;
+  display:inline-block;padding:9px 14px;border-radius:10px;background:var(--accent);color:#fff;text-decoration:none;font-weight:600;border:none;cursor:pointer;box-shadow:0 6px 18px rgba(15,118,110,0.12);
 }
-.btn.ghost{background:transparent;color:var(--accent);border:1px solid rgba(11,95,255,0.12)}
+.btn.ghost{background:transparent;color:var(--accent);border:1px solid rgba(15,118,110,0.12)}
 
-.skills-grid{
-  list-style:none;padding:0;margin:10px 0 0;display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:10px;
+/* grid main */
+.main-grid{display:grid;grid-template-columns: 1fr 340px;gap:18px;padding-bottom:36px}
+@media (max-width:920px){
+  .main-grid{grid-template-columns:1fr}
 }
-.skills-grid li{background:#f3f6ff;padding:10px;border-radius:8px;font-weight:600;color:#0b3aa6}
 
-.experience .job{margin-bottom:14px}
-.experience .meta{color:var(--muted);font-size:14px;margin:6px 0}
-.experience ul{margin:8px 0 0;padding-left:18px}
+/* card */
+.card{background:var(--card);padding:18px;border-radius:12px;box-shadow:var(--shadow);overflow:hidden;transform:translateY(12px);opacity:0;transition:transform .7s ease,opacity .7s ease}
+.card h2{margin-top:0}
+.skill-list{display:flex;flex-direction:column;gap:12px}
+.skill-head{display:flex;justify-content:space-between;font-weight:600;margin-bottom:6px;color:var(--muted)}
+.bar{height:10px;background:#eef2f3;border-radius:999px;overflow:hidden}
+.bar-fill{height:100%;width:0;border-radius:999px;background:linear-gradient(90deg,#06b6d4,#0f766e);transition:width 1s cubic-bezier(.2,.9,.2,1)}
 
-footer.site-footer{padding:24px 0;text-align:center;color:var(--muted);font-size:14px}
+/* job */
+.job{margin-bottom:14px}
+.meta{color:var(--muted);font-size:14px;margin:6px 0}
 
-@media (max-width:780px){
-  .header-inner{flex-direction:column;align-items:flex-start}
-  .contact{align-self:stretch}
-  .skills-grid{grid-template-columns:repeat(2,1fr)}
+/* footer */
+.footer{padding:20px 0;border-top:1px solid #eef2f4;margin-top:18px;color:var(--muted)}
+
+/* small screens */
+@media (max-width:520px){
+  .avatar-wrap{width:110px;height:110px}
+  .name{font-size:22px}
+  .main-grid{gap:12px}
 }
+
+/* subtle hover */
+.avatar-wrap:hover .avatar{transform:scale(1.03) translateY(-4px)}
+.card:focus-within, .card:hover{transform:translateY(0)}
+
+/* animated reveal classes */
+.revealed{transform:none;opacity:1}
+
+/* tiny progress labels on mobile */
+.skill .skill-head span{font-size:14px}
