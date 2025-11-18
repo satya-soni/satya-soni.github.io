@@ -5,42 +5,40 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Satya Soni — Resume</title>
 
-  <!-- Google font -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <header class="hero">
-    <div class="container">
-      <div class="profile">
-        <div class="avatar-wrap">
-          <img src="profile.jpg" alt="Satya Soni photo" class="avatar" />
+    <div class="container hero-inner">
+      <div class="profile-card" role="banner">
+        <div class="avatar-wrap" aria-hidden="false">
+          <img src="profile.jpg" alt="Satya Soni" class="avatar" />
         </div>
-        <div class="profile-text">
+        <div class="profile-info">
           <h1 class="name">Satya Soni</h1>
-          <p class="location">Sagar, India</p>
+          <p class="location">Sagar, India 470002</p>
           <p class="role">Background Verification & Technical Operations</p>
+
           <div class="contact-row">
-            <!-- phone intentionally hidden -->
-            <span class="contact-item">Email: <a href="mailto:satyasoni2001@gmail.com">satyasoni2001@gmail.com</a></span>
-            <span class="contact-item">LinkedIn: <a href="https://linkedin.com/in/satya-soni-a0239b250" target="_blank" rel="noopener">satya-soni</a></span>
-            <span class="contact-item">Portfolio: <a href="https://satyasoni2001.github.io" target="_blank" rel="noopener">site</a></span>
+            <span>Email: <a href="mailto:satyasoni2001@gmail.com">satyasoni2001@gmail.com</a></span>
+            <span>LinkedIn: <a href="https://linkedin.com/in/satya-soni-a0239b250" target="_blank" rel="noopener">satya-soni</a></span>
+            <span class="hidden-phone">Phone: hidden</span>
           </div>
 
           <div class="actions">
             <a class="btn" href="Satya.docx" download>Download CV</a>
-            <button id="toggle-theme" class="btn ghost">Toggle animation</button>
+            <button id="toggle-anim" class="btn ghost">Disable animations</button>
           </div>
         </div>
       </div>
     </div>
   </header>
 
-  <main class="container main-grid">
+  <main class="container main-grid" id="main">
     <section class="card summary" data-reveal>
       <h2>Summary</h2>
-      <p>Detail-oriented professional with experience in background verification, customer support, and technical operations. Skilled in Python, C/C++, Excel, KYC, document validation, CRM systems, and SAP basics. Strong communicator with a consistent record of maintaining accuracy and solving issues quickly.</p>
+      <p>Detail-oriented professional with experience in background verification, customer support, and technical operations. Skilled in Python, C/C++, Excel, KYC processes, document validation, CRM systems, and SAP basics. Strong communicator with a consistent record of maintaining accuracy, solving issues quickly, and supporting clients effectively.</p>
     </section>
 
     <section class="card skills" data-reveal>
@@ -55,51 +53,76 @@
           <div class="bar"><div class="bar-fill" style="--fill:70%"></div></div>
         </div>
         <div class="skill">
-          <div class="skill-head"><span>Excel</span><span>90%</span></div>
+          <div class="skill-head"><span>Microsoft Excel</span><span>90%</span></div>
           <div class="bar"><div class="bar-fill" style="--fill:90%"></div></div>
         </div>
         <div class="skill">
-          <div class="skill-head"><span>BGV & KYC</span><span>95%</span></div>
+          <div class="skill-head"><span>BGV / KYC</span><span>95%</span></div>
           <div class="bar"><div class="bar-fill" style="--fill:95%"></div></div>
         </div>
       </div>
+
+      <h3 style="margin-top:16px">Tools & other</h3>
+      <ul class="mini-list">
+        <li>Microsoft Word</li>
+        <li>CRM platforms</li>
+        <li>SAP basics</li>
+        <li>Process documentation</li>
+      </ul>
     </section>
 
     <section class="card experience" data-reveal>
       <h2>Experience</h2>
 
       <article class="job">
-        <h3>Background Verification Executive — Deepxamin Research Pvt. Ltd.</h3>
-        <p class="meta">October 2022 – Present • Sagar, MP</p>
+        <h3>Background Verification Executive</h3>
+        <p class="meta">Deepxamin Research Pvt. Ltd., Sagar, MP — October 2022 – Present</p>
         <ul>
           <li>Performed complete background checks covering education, employment, and ID verification.</li>
           <li>Validated documents with source records while maintaining full accuracy.</li>
-          <li>Prepared weekly Excel-based verification reports and reduced turnaround time by improving processes.</li>
+          <li>Prepared weekly Excel-based verification reports and reduced turnaround time by improving internal processes.</li>
+          <li>Built and maintained strong client relationships; achieved 95% positive client feedback.</li>
         </ul>
       </article>
 
       <article class="job">
-        <h3>Computer Teacher — Vedic College</h3>
-        <p class="meta">January 2024 – March 2025</p>
+        <h3>Computer Teacher</h3>
+        <p class="meta">Vedic College, Sagar — January 2024 – March 2025</p>
         <ul>
-          <li>Trained students in computer fundamentals and IT skills and provided structured feedback.</li>
+          <li>Trained students in computer fundamentals and IT skills. Reviewed assignments and shared structured feedback.</li>
         </ul>
       </article>
 
       <article class="job">
-        <h3>Customer Support Executive — Reliance Retail</h3>
-        <p class="meta">December 2019 – January 2024</p>
+        <h3>Customer Support Executive</h3>
+        <p class="meta">Reliance Retail Ltd., Sagar — December 2019 – January 2024</p>
         <ul>
-          <li>Handled 150+ customer interactions daily and trained new staff in troubleshooting and communication.</li>
+          <li>Handled 150+ customer interactions daily and trained new staff in customer communication and troubleshooting.</li>
         </ul>
       </article>
 
-      <!-- Add other roles similarly -->
+      <article class="job">
+        <h3>Customer Associate</h3>
+        <p class="meta">Bajaj Finance Pvt. Ltd., Sagar — June 2022 – October 2022</p>
+        <ul>
+          <li>Responded to account and payment inquiries and maintained target SLAs.</li>
+        </ul>
+      </article>
+
+      <article class="job">
+        <h3>Sales Adviser</h3>
+        <p class="meta">IndiaMART, Sagar — March 2019 – December 2019</p>
+        <ul>
+          <li>Supported lead qualification and achieved high customer satisfaction.</li>
+        </ul>
+      </article>
     </section>
 
     <section class="card education" data-reveal>
       <h2>Education</h2>
-      <p><strong>B.Tech — Computer Science & Engineering</strong><br>Babulal Tarabai Institute of Research & Technology, Sagar (May 2019 – June 2023)</p>
+      <p><strong>B.Tech, Computer Science & Engineering</strong><br>Babulal Tarabai Institute of Research & Technology, Sagar — May 2019 – June 2023</p>
+      <h3 style="margin-top:12px">Languages</h3>
+      <p>English, Hindi</p>
     </section>
   </main>
 
