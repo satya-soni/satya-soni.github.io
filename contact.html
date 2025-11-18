@@ -21,7 +21,13 @@
   </nav>
 
   <header class="container">
-    <h1 class="page-title" data-reveal>Contact</h1>
+    <div style="display:flex;justify-content:space-between;align-items:center">
+      <h1 class="page-title" data-reveal>Contact</h1>
+      <div>
+        <button id="preview-cv-contact" class="btn small">Preview CV</button>
+        <a href="Satya.pdf" download class="btn small">Download CV</a>
+      </div>
+    </div>
     <p class="muted" data-reveal>Preferred contact by email. Phone is hidden for privacy.</p>
   </header>
 
@@ -34,7 +40,7 @@
       <p id="phone-mask">Phone is hidden for privacy.</p>
       <button id="reveal-phone" class="btn ghost">Reveal phone (confirm)</button>
 
-      <p style="margin-top:18px" class="muted">If you need a copy of the CV, you can download it from the Home page.</p>
+      <p style="margin-top:18px" class="muted">If you need a copy of the CV, you can download or preview it here.</p>
     </section>
 
     <aside class="card" data-reveal>
@@ -45,6 +51,23 @@
       <p><a class="link" href="https://linkedin.com/in/satya-soni-a0239b250" target="_blank" rel="noopener">linkedin.com/in/satya-soni-a0239b250</a></p>
     </aside>
   </main>
+
+  <!-- PDF modal -->
+  <div id="pdf-modal" class="pdf-modal" aria-hidden="true">
+    <div class="pdf-modal-backdrop" id="pdf-backdrop"></div>
+    <div class="pdf-modal-panel" role="dialog" aria-modal="true" aria-labelledby="pdf-title">
+      <div class="pdf-modal-header">
+        <h3 id="pdf-title">Curriculum Vitae — Satya Soni</h3>
+        <div class="pdf-actions">
+          <a href="Satya.pdf" download class="btn small">Download</a>
+          <button id="pdf-close" class="btn ghost">Close</button>
+        </div>
+      </div>
+      <div class="pdf-modal-body">
+        <iframe id="pdf-frame" src="Satya.pdf" frameborder="0" title="CV preview" style="width:100%;height:80vh;"></iframe>
+      </div>
+    </div>
+  </div>
 
   <footer class="footer">
     <div class="container footer-inner">
