@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Projects — Satya Soni</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="page page-projects">
+  <nav class="nav">
+    <div class="nav-inner container">
+      <a class="brand" href="index.html">Satya Soni</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="experience.html">Experience</a></li>
+        <li><a href="projects.html" class="active">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="container">
+    <h1 class="page-title" data-reveal>Projects</h1>
+    <p class="muted" data-reveal>Small selection of relevant work and side projects.</p>
+  </header>
+
+  <main class="container projects-grid" id="main">
+    <!-- Project card -->
+    <article class="card project" data-reveal>
+      <div class="project-thumb" aria-hidden="true">
+        <!-- small decorative SVG -->
+        <svg viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg"><rect width="200" height="120" rx="10" fill="#eef8f7"/></svg>
+      </div>
+      <div class="project-body">
+        <h3>Verification Dashboard (internal)</h3>
+        <p class="meta">Tooling to aggregate verification results and reduce manual work.</p>
+        <p>Built lightweight Excel automation and reporting templates to reduce turnaround time.</p>
+        <div class="project-tags">
+          <span>Excel</span><span>Reporting</span><span>Automation</span>
+        </div>
+      </div>
+    </article>
+
+    <article class="card project" data-reveal>
+      <div class="project-thumb" aria-hidden="true">
+        <svg viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg"><rect width="200" height="120" rx="10" fill="#fff3e6"/></svg>
+      </div>
+      <div class="project-body">
+        <h3>Customer Support Playbook</h3>
+        <p class="meta">Process documentation and training materials.</p>
+        <p>Created onboarding and troubleshooting guides for new hires to improve quality.</p>
+        <div class="project-tags">
+          <span>Documentation</span><span>Training</span>
+        </div>
+      </div>
+    </article>
+
+    <!-- add more project cards as needed -->
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div>© <span id="year"></span> Satya Soni</div>
+      <div class="foot-links">
+        <a href="index.html">Home</a>
+        <a href="experience.html">Experience</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
