@@ -4,133 +4,111 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Satya Soni — Resume</title>
-  <meta name="description" content="Satya Soni | Background Verification Executive | Resume and Portfolio" />
-  <link rel="stylesheet" href="style.css" />
-  <link rel="preconnect" href="https://fonts.gstatic.com">
+
+  <!-- Google font -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <div class="name-block">
-        <h1>Satya Soni</h1>
-        <p class="sub">Background Verification Executive</p>
-      </div>
-      <div class="contact">
-        <a href="tel:+919302164311">+91 9302164311</a>
-        <a href="mailto:satyasoni2001@gmail.com">satyasoni2001@gmail.com</a>
-        <p>Sagar, Madhya Pradesh, India</p>
+  <header class="hero">
+    <div class="container">
+      <div class="profile">
+        <div class="avatar-wrap">
+          <img src="profile.jpg" alt="Satya Soni photo" class="avatar" />
+        </div>
+        <div class="profile-text">
+          <h1 class="name">Satya Soni</h1>
+          <p class="location">Sagar, India</p>
+          <p class="role">Background Verification & Technical Operations</p>
+          <div class="contact-row">
+            <!-- phone intentionally hidden -->
+            <span class="contact-item">Email: <a href="mailto:satyasoni2001@gmail.com">satyasoni2001@gmail.com</a></span>
+            <span class="contact-item">LinkedIn: <a href="https://linkedin.com/in/satya-soni-a0239b250" target="_blank" rel="noopener">satya-soni</a></span>
+            <span class="contact-item">Portfolio: <a href="https://satyasoni2001.github.io" target="_blank" rel="noopener">site</a></span>
+          </div>
+
+          <div class="actions">
+            <a class="btn" href="Satya.docx" download>Download CV</a>
+            <button id="toggle-theme" class="btn ghost">Toggle animation</button>
+          </div>
+        </div>
       </div>
     </div>
   </header>
 
-  <main class="container">
-    <section class="summary card">
+  <main class="container main-grid">
+    <section class="card summary" data-reveal>
       <h2>Summary</h2>
-      <p>Detail-oriented professional with expertise in Python, C/C++, and Microsoft Excel including VLOOKUP and pivot tables. Proficient in background verification, KYC, and identity validation. Skilled in customer support, process documentation, quality assurance, and stakeholder communication. Seeking roles in BGV, KYC, compliance operations, or customer success.</p>
-      <div class="cta">
-        <a class="btn" href="Satya_Soni_Resume.pdf" download>Download CV (PDF)</a>
-        <a class="btn ghost" href="mailto:satyasoni2001@gmail.com?subject=Opportunity%20for%20Satya%20Soni">Contact</a>
+      <p>Detail-oriented professional with experience in background verification, customer support, and technical operations. Skilled in Python, C/C++, Excel, KYC, document validation, CRM systems, and SAP basics. Strong communicator with a consistent record of maintaining accuracy and solving issues quickly.</p>
+    </section>
+
+    <section class="card skills" data-reveal>
+      <h2>Skills</h2>
+      <div class="skill-list">
+        <div class="skill">
+          <div class="skill-head"><span>Python</span><span>85%</span></div>
+          <div class="bar"><div class="bar-fill" style="--fill:85%"></div></div>
+        </div>
+        <div class="skill">
+          <div class="skill-head"><span>C / C++</span><span>70%</span></div>
+          <div class="bar"><div class="bar-fill" style="--fill:70%"></div></div>
+        </div>
+        <div class="skill">
+          <div class="skill-head"><span>Excel</span><span>90%</span></div>
+          <div class="bar"><div class="bar-fill" style="--fill:90%"></div></div>
+        </div>
+        <div class="skill">
+          <div class="skill-head"><span>BGV & KYC</span><span>95%</span></div>
+          <div class="bar"><div class="bar-fill" style="--fill:95%"></div></div>
+        </div>
       </div>
     </section>
 
-    <section class="skills card">
-      <h2>Skills</h2>
-      <ul class="skills-grid">
-        <li>Python</li>
-        <li>C / C++</li>
-        <li>MS Excel (VLOOKUP, Pivot)</li>
-        <li>MS Word</li>
-        <li>Background verification (BGV)</li>
-        <li>Document verification</li>
-        <li>KYC</li>
-        <li>Identity validation</li>
-        <li>Customer support</li>
-        <li>Data entry</li>
-        <li>Process documentation</li>
-        <li>Quality assurance</li>
-        <li>SAP basics</li>
-        <li>Stakeholder communication</li>
-        <li>CRM platforms</li>
-      </ul>
-    </section>
-
-    <section class="experience card">
+    <section class="card experience" data-reveal>
       <h2>Experience</h2>
 
       <article class="job">
-        <h3>Background Verification Executive</h3>
-        <p class="meta">Deepxamin Research Pvt. Ltd. — Sagar, MP | Oct 2022 - Present</p>
+        <h3>Background Verification Executive — Deepxamin Research Pvt. Ltd.</h3>
+        <p class="meta">October 2022 – Present • Sagar, MP</p>
         <ul>
-          <li>Conduct full lifecycle background checks including education, employment, and identity verification.</li>
-          <li>Validate and reconcile documents with source records to ensure 100% accuracy.</li>
-          <li>Maintain verification records in Excel and prepare weekly reports for management.</li>
-          <li>Reduced turnaround time for education verification through process optimization.</li>
-          <li>Achieved 95% positive feedback rating from client surveys.</li>
+          <li>Performed complete background checks covering education, employment, and ID verification.</li>
+          <li>Validated documents with source records while maintaining full accuracy.</li>
+          <li>Prepared weekly Excel-based verification reports and reduced turnaround time by improving processes.</li>
         </ul>
       </article>
 
       <article class="job">
-        <h3>Computer Teacher</h3>
-        <p class="meta">Vedic College — Sagar | Jan 2024 - Mar 2025</p>
+        <h3>Computer Teacher — Vedic College</h3>
+        <p class="meta">January 2024 – March 2025</p>
         <ul>
-          <li>Provided exam-focused revision and IT resources to students.</li>
-          <li>Maintained a positive learning environment and tracked student progress.</li>
+          <li>Trained students in computer fundamentals and IT skills and provided structured feedback.</li>
         </ul>
       </article>
 
       <article class="job">
-        <h3>Customer Support Executive</h3>
-        <p class="meta">Reliance Retail Ltd. — Sagar, MP | Dec 2019 - Jan 2024</p>
+        <h3>Customer Support Executive — Reliance Retail</h3>
+        <p class="meta">December 2019 – January 2024</p>
         <ul>
-          <li>Managed 150+ customer interactions daily for Jio services across channels.</li>
-          <li>Handled billing, recharges, promotions, and trained new staff.</li>
+          <li>Handled 150+ customer interactions daily and trained new staff in troubleshooting and communication.</li>
         </ul>
       </article>
 
-      <article class="job">
-        <h3>Customer Associate</h3>
-        <p class="meta">Bajaj Finance Pvt. Ltd. — Sagar | Jun 2022 - Oct 2022</p>
-        <ul>
-          <li>Resolved account queries and maintained SLA-driven service quality.</li>
-        </ul>
-      </article>
-
-      <article class="job">
-        <h3>Sales Adviser</h3>
-        <p class="meta">IndiaMART — Sagar, MP | Mar 2019 - Dec 2019</p>
-        <ul>
-          <li>Supported lead qualification and achieved 97% customer satisfaction rating.</li>
-        </ul>
-      </article>
+      <!-- Add other roles similarly -->
     </section>
 
-    <section class="education card">
+    <section class="card education" data-reveal>
       <h2>Education</h2>
-      <p><strong>B.Tech in Computer Science and Engineering</strong><br>
-      Babulal Tarabai Institute of Research & Technology, Sagar | May 2019 - Jun 2023</p>
-    </section>
-
-    <section class="languages card">
-      <h2>Languages</h2>
-      <p>English, Hindi</p>
-    </section>
-
-    <section class="footer card contact-card">
-      <h2>Contact</h2>
-      <p>If you are a recruiter and want to discuss a role, please email or call.</p>
-      <p><a href="mailto:satyasoni2001@gmail.com">satyasoni2001@gmail.com</a> · <a href="tel:+919302164311">+91 9302164311</a></p>
+      <p><strong>B.Tech — Computer Science & Engineering</strong><br>Babulal Tarabai Institute of Research & Technology, Sagar (May 2019 – June 2023)</p>
     </section>
   </main>
 
-  <footer class="site-footer">
+  <footer class="footer">
     <div class="container">
-      <p>© <span id="year"></span> Satya Soni. All rights reserved.</p>
+      <p>© <span id="year"></span> Satya Soni. Contact number is hidden for privacy.</p>
     </div>
   </footer>
 
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
